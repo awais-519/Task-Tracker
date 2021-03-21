@@ -4,30 +4,31 @@ import { useState } from "react";
 import AddTask from "./Components/AddTask";
 
 function App() {
-  let [tasks, setTasks] = useState([
+  const [showAddTask, setShowAddTask] = useState(false);
+
+  const [tasks, setTasks] = useState([
     {
       id: 1,
-      name: "Doctors Appointment",
-      schedule: "Monday at 1:00pm",
+      text: "Doctors Appointment",
+      day: "Monday at 1:00pm",
       reminder: true,
     },
     {
       id: 2,
-      name: "School Work",
-      schedule: "Tue at 2:00pm",
+      text: "School Work",
+      day: "Tue at 2:00pm",
       reminder: true,
     },
     {
       id: 3,
-      name: "Cricket Match",
-      schedule: "Sunday at 9:00am",
+      text: "Cricket Match",
+      day: "Sunday at 9:00am",
       reminder: false,
     },
   ]);
 
   const addTask = (task) => {
-    console.log(task);
-    const id = Math.floor(Math.random() * 1000 + 1);
+    const id = Math.floor(Math.random() * 1000) + 1;
     const newTask = { id, ...task };
     setTasks([...tasks, newTask]);
   };
@@ -48,8 +49,13 @@ function App() {
 
   return (
     <div className="container">
-      <Header title="Task Tracker" />
-      <AddTask onAdd={addTask} />
+      <Header
+        onAdd={() => setShowAddTask(!showAddTask)}
+        title="Task Tracker"
+        showAddTask={showAddTask}
+      />
+      {showAddTask && <AddTask onAdd={addTask} />}
+
       {tasks.length > 0 ? (
         <Tasks tasks={tasks} onDelete={delTask} onToggle={toggleTask} />
       ) : (
