@@ -1,0 +1,34 @@
+        ----ES LINT7----
+ makes boiler plates of the components by just usinf few words like 'rafce' that will give you a boiler plate for JS.
+
+        ----BABEL----
+This is what make our code understandable to our browser. Like convert our ReactJS code into a much simpler HTML CSS JS form shich browser can understand.
+Now to add an object or some data we need to use the setState or whatever function parameterized as (...tasks, {'object'})
+
+        ----PROPS----
+ Sending anything to another JS file
+
+        ---- STATE----
+State is a one way data. Its immutable. You cant just push any data into the it later on. So you have to create form the start.
+
+        ----GLOBAL STATE----
+whatever we put in the app.js will be made global and can be accessed thorughout.`
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-->  LEARN CONTEXT API ++ FETCH API ++ REDUX
+
