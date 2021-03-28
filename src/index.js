@@ -6,6 +6,14 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
+     {/* <image className='imag' />
+     */}
+     {/* <p className='tex'>Task Tracker</p>
+
+      <div className='rect'>
+          
+        </div>
+     */}
     <App />
   </React.StrictMode>,
   document.getElementById('root')

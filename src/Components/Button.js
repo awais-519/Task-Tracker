@@ -1,13 +1,12 @@
 import PropType from 'prop-types'
 
 
-
 function Button({color, text, onAdd }){
 
 
     return (
         <div>
-            <button onClick={onAdd} className="btn" style={{backgroundColor:color}} >{text}</button>
+             <button onClick={onAdd} className="btn" style={{backgroundColor:color}} >{text}</button>
         </div>
     )
 }
